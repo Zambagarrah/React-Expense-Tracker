@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import InitialBalanceInput from './components/InitialBalanceInput';
 import TransactionForm from './components/TransactionForm';
 import SummaryCard from './components/SummaryCard';
@@ -10,10 +10,9 @@ import { TransactionContext } from './context/TransactionContext';
 
 
 function App() {
-  const { theme } = useContext(TransactionContext);
 
   return (
-    <div className={`app-container ${theme}`}>
+    <div className={`app-container `}>
       <ThemeToggle />
       <div className="container py-4">
         <header className="mb-4">

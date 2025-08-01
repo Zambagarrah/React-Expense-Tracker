@@ -16,3 +16,24 @@ h1 {
   background: #121212;
   color: #f5f5f5;
 }
+
+/* src/styles/animatedBackground.css */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body {
+  background: linear-gradient(-45deg, #1f2937, #3b82f6, #10b981, #f59e0b);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  color: #f8fafc;
+}
+
