@@ -1,6 +1,8 @@
 import React from 'react';
-import InitialBalanceInput from '../components/InitialBalanceInput';
-
+import InitialBalanceInput from './components/InitialBalanceInput';
+import TransactionForm from './components/TransactionForm';
+import SummaryCard from './components/SummaryCard';
+import TransactionTable from './components/TransactionTable';
 
 function App() {
   return (
@@ -12,6 +14,9 @@ function App() {
 
       <main>
         <InitialBalanceInput />
+        <TransactionForm />
+        <SummaryCard />
+        <TransactionTable />
       </main>
     </div>
   );
@@ -19,5 +24,3 @@ function App() {
 
 export default App;
 
-
-// This sets up the app layout using Bootstrap’s .container, .text-center, and .bg-light utilities. The placeholder will be replaced as we build each module.
