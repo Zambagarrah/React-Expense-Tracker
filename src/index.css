@@ -6,3 +6,13 @@ body {
 h1 {
   font-weight: 600;
 }
+
+.app-container.light {
+  background: #ffffff;
+  color: #1c1c1c;
+}
+
+.app-container.dark {
+  background: #121212;
+  color: #f5f5f5;
+}

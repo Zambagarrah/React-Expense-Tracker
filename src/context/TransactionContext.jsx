@@ -45,8 +45,24 @@ export const TransactionProvider = ({ children }) => {
   };
 
   const toggleDateFilter = () => {
-    setShowRecentOnly((prev) => !prev);
+      setShowRecentOnly((prev) => !prev);
   };
+
+  // Theme state: 'light' or 'dark'
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem('theme') || 'light';
+  });
+
+  // Persist theme to localStorage
+  useEffect(() => {
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  // Toggle function
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
+  };
+
 
   return (
     <TransactionContext.Provider
@@ -61,6 +77,8 @@ export const TransactionProvider = ({ children }) => {
         setSelectedCategory,
         showRecentOnly,
         toggleDateFilter,
+        theme,
+        toggleTheme,
       }}
     >
       {children}
