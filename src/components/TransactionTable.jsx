@@ -1,11 +1,10 @@
 import React, { useContext, useState, useRef } from 'react';
-import { Table, Button, OverlayTrigger, Tooltip } from 'react-bootstrap';
+import { Table, Button } from 'react-bootstrap';
 import { TransactionContext } from '../context/TransactionContext';
 import EditTransactionModal from './EditTransactionModal';
 import { CSVLink } from 'react-csv';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
-import 'bootstrap-icons/font/bootstrap-icons.css'; // 💡 Bootstrap Icons
 
 const TransactionTable = ({ transactions: filteredTxs }) => {
   const { transactions, deleteTransaction, updateTransaction } = useContext(TransactionContext);
@@ -42,21 +41,16 @@ const TransactionTable = ({ transactions: filteredTxs }) => {
   return (
     <>
       <div className="d-flex flex-wrap justify-content-start gap-3 mb-3">
-        <OverlayTrigger placement="top" overlay={<Tooltip>Download as CSV</Tooltip>}>
-          <CSVLink
-            data={displayedTxs}
-            filename="expenses.csv"
-            className="btn btn-success"
-          >
-            <i className="bi bi-file-earmark-spreadsheet me-1"></i> CSV
-          </CSVLink>
-        </OverlayTrigger>
-
-        <OverlayTrigger placement="top" overlay={<Tooltip>Download as PDF</Tooltip>}>
-          <Button onClick={exportPDF} className="btn btn-danger">
-            <i className="bi bi-file-earmark-pdf me-1"></i> PDF
-          </Button>
-        </OverlayTrigger>
+        <CSVLink
+          data={displayedTxs}
+          filename="expenses.csv"
+          className="btn btn-success"
+        >
+          Export CSV
+        </CSVLink>
+        <Button onClick={exportPDF} className="btn btn-danger">
+          Export PDF
+        </Button>
       </div>
 
       <div ref={exportRef}>
@@ -81,27 +75,8 @@ const TransactionTable = ({ transactions: filteredTxs }) => {
                   <td>{tx.category || '-'}</td>
                   <td>{tx.amount.toLocaleString()}</td>
                   <td>
-                    <div className="d-flex gap-2">
-                      <OverlayTrigger placement="top" overlay={<Tooltip>Edit Entry</Tooltip>}>
-                        <Button
-                          size="sm"
-                          variant="outline-primary"
-                          onClick={() => handleEdit(idx)}
-                        >
-                          <i className="bi bi-pencil"></i>
-                        </Button>
-                      </OverlayTrigger>
-
-                      <OverlayTrigger placement="top" overlay={<Tooltip>Delete Entry</Tooltip>}>
-                        <Button
-                          size="sm"
-                          variant="outline-danger"
-                          onClick={() => deleteTransaction(idx)}
-                        >
-                          <i className="bi bi-trash"></i>
-                        </Button>
-                      </OverlayTrigger>
-                    </div>
+                    <Button size="sm" variant="outline-primary" onClick={() => handleEdit(idx)}>✏️</Button>{' '}
+                    <Button size="sm" variant="outline-danger" onClick={() => deleteTransaction(idx)}>🗑️</Button>
                   </td>
                 </tr>
               ))
