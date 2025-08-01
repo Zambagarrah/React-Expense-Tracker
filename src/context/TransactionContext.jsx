@@ -40,15 +40,14 @@ export const TransactionProvider = ({ children }) => {
 
   // Delete a transaction by its index
   const deleteTransaction = (index) => {
-    const updated = [...transactions];
-    updated.splice(index, 1);
+    const updated = transactions.filter((_, i) => i !== index);
     setTransactions(updated);
   };
 
+
   // Edit an existing transaction
-  const editTransaction = (index, updatedData) => {
-    const updated = [...transactions];
-    updated[index] = { ...updated[index], ...updatedData };
+  const updateTransaction = (index, updatedTx) => {
+    const updated = transactions.map((tx, i) => i === index ? updatedTx : tx);
     setTransactions(updated);
   };
 
@@ -60,7 +59,7 @@ export const TransactionProvider = ({ children }) => {
         transactions,
         addTransaction,
         deleteTransaction,
-        editTransaction,
+        updateTransaction,
       }}
     >
       {children}
