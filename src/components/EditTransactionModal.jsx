@@ -5,13 +5,13 @@ const EditTransactionModal = ({ show, handleClose, originalData, onSave }) => {
   const [form, setForm] = useState({ ...originalData });
 
   useEffect(() => {
-    setForm({ ...originalData }); // Reset form when modal opens
+    setForm({ ...originalData });
   }, [originalData]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const updated = { ...form, amount: parseFloat(form.amount) };
-    onSave(updated); // Send updated data back
+    onSave(updated);
     handleClose();
   };
 
@@ -80,3 +80,4 @@ const EditTransactionModal = ({ show, handleClose, originalData, onSave }) => {
 };
 
 export default EditTransactionModal;
+
