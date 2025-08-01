@@ -1,5 +1,6 @@
-// src/App.jsx
 import React from 'react';
+import InitialBalanceInput from '../components/InitialBalanceInput';
+
 
 function App() {
   return (
@@ -10,10 +11,7 @@ function App() {
       </header>
 
       <main>
-        {/* Placeholder for future components */}
-        <section className="bg-light p-3 rounded mb-3">
-          <h4>👋 Welcome! We’ll get started with your balance and transactions soon.</h4>
-        </section>
+        <InitialBalanceInput />
       </main>
     </div>
   );
