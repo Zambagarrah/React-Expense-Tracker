@@ -16,59 +16,71 @@ const EditTransactionModal = ({ show, handleClose, originalData, onSave }) => {
   };
 
   return (
-    <Modal show={show} onHide={handleClose} centered>
+    <Modal show={show} onHide={handleClose} centered scrollable>
       <Form onSubmit={handleSubmit}>
         <Modal.Header closeButton>
           <Modal.Title>Edit Transaction</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Form.Group className="mb-2">
-            <Form.Label>Type</Form.Label>
-            <Form.Select
-              value={form.type}
-              onChange={(e) => setForm({ ...form, type: e.target.value })}
-            >
-              <option value="Income">Income</option>
-              <option value="Expense">Expense</option>
-            </Form.Select>
-          </Form.Group>
+          <div className="row g-3">
+            <div className="col-12 col-sm-6">
+              <Form.Group>
+                <Form.Label>Type</Form.Label>
+                <Form.Select
+                  value={form.type}
+                  onChange={(e) => setForm({ ...form, type: e.target.value })}
+                >
+                  <option value="Income">Income</option>
+                  <option value="Expense">Expense</option>
+                </Form.Select>
+              </Form.Group>
+            </div>
 
-          <Form.Group className="mb-2">
-            <Form.Label>Description</Form.Label>
-            <Form.Control
-              type="text"
-              value={form.description}
-              onChange={(e) => setForm({ ...form, description: e.target.value })}
-            />
-          </Form.Group>
+            <div className="col-12 col-sm-6">
+              <Form.Group>
+                <Form.Label>Amount (KES)</Form.Label>
+                <Form.Control
+                  type="number"
+                  step="0.01"
+                  value={form.amount}
+                  onChange={(e) => setForm({ ...form, amount: e.target.value })}
+                />
+              </Form.Group>
+            </div>
 
-          <Form.Group className="mb-2">
-            <Form.Label>Amount (KES)</Form.Label>
-            <Form.Control
-              type="number"
-              step="0.01"
-              value={form.amount}
-              onChange={(e) => setForm({ ...form, amount: e.target.value })}
-            />
-          </Form.Group>
+            <div className="col-12">
+              <Form.Group>
+                <Form.Label>Description</Form.Label>
+                <Form.Control
+                  type="text"
+                  value={form.description}
+                  onChange={(e) => setForm({ ...form, description: e.target.value })}
+                />
+              </Form.Group>
+            </div>
 
-          <Form.Group className="mb-2">
-            <Form.Label>Category</Form.Label>
-            <Form.Control
-              type="text"
-              value={form.category}
-              onChange={(e) => setForm({ ...form, category: e.target.value })}
-            />
-          </Form.Group>
+            <div className="col-12 col-sm-6">
+              <Form.Group>
+                <Form.Label>Category</Form.Label>
+                <Form.Control
+                  type="text"
+                  value={form.category}
+                  onChange={(e) => setForm({ ...form, category: e.target.value })}
+                />
+              </Form.Group>
+            </div>
 
-          <Form.Group>
-            <Form.Label>Date</Form.Label>
-            <Form.Control
-              type="date"
-              value={form.date}
-              onChange={(e) => setForm({ ...form, date: e.target.value })}
-            />
-          </Form.Group>
+            <div className="col-12 col-sm-6">
+              <Form.Group>
+                <Form.Label>Date</Form.Label>
+                <Form.Control
+                  type="date"
+                  value={form.date}
+                  onChange={(e) => setForm({ ...form, date: e.target.value })}
+                />
+              </Form.Group>
+            </div>
+          </div>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>Cancel</Button>
@@ -80,4 +92,3 @@ const EditTransactionModal = ({ show, handleClose, originalData, onSave }) => {
 };
 
 export default EditTransactionModal;
-
