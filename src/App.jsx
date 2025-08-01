@@ -6,6 +6,9 @@ import TransactionTable from './components/TransactionTable';
 import ThemeToggle from './components/ThemeToggle';
 import { TransactionContext } from './context/TransactionContext';
 
+
+
+
 function App() {
   const { theme } = useContext(TransactionContext);
 

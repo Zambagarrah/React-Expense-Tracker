@@ -11,8 +11,11 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.7",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^3.0.1",
     "react": "^19.1.0",
     "react-bootstrap": "^2.10.10",
+    "react-csv": "^2.2.2",
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
