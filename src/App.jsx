@@ -3,6 +3,7 @@ import InitialBalanceInput from './components/InitialBalanceInput';
 import TransactionForm from './components/TransactionForm';
 import SummaryCard from './components/SummaryCard';
 import TransactionTable from './components/TransactionTable';
+import ThemeToggle from './components/ThemeToggle';
 import { TransactionContext } from './context/TransactionContext';
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
 
   return (
     <div className={`app-container ${theme}`}>
+      <ThemeToggle />
       <div className="container py-4">
         <header className="mb-4">
           <h1 className="text-center">💸 Expense Tracker</h1>

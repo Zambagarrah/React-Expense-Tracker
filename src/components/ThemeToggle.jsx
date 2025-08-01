@@ -1,15 +1,19 @@
-// ThemeToggle.jsx
-import { useContext } from 'react';
+// src/components/ThemeToggle.jsx
+import React, { useContext } from 'react';
 import { TransactionContext } from '../context/TransactionContext';
+import '../styles/ThemeToggle.css'; // ⬅️ External CSS for positioning
 
-const ThemeToggle = () => {
+function ThemeToggle() {
   const { theme, toggleTheme } = useContext(TransactionContext);
 
   return (
-    <button onClick={toggleTheme}>
-      Switch to {theme === 'light' ? 'Dark' : 'Light'} Mode
+    <button 
+      className="theme-toggle-pill btn btn-light"
+      onClick={toggleTheme}
+    >
+      {theme === 'light' ? '🌙' : '🌞'}
     </button>
   );
-};
+}
 
 export default ThemeToggle;
