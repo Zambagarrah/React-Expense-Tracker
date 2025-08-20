@@ -9,8 +9,6 @@ A responsive, modular Expense Tracker built in React using Vite, Bootstrap, Cont
 - Mobile-first layout with scrollable modals  
 - Bootstrap-powered UI with tooltips and icons  
 
-Built for demo-ready clarity, reproducibility, and classroom utility.
-
 ---
 
 ## 🛠️ Tech Stack
