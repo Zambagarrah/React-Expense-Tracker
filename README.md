@@ -1,4 +1,4 @@
-# 💸 React Expense Tracker
+# React Expense Tracker
 
 A responsive, modular Expense Tracker built in React using Vite, Bootstrap, Context API, and localStorage. Features include:
 
