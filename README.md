@@ -11,7 +11,7 @@ A responsive, modular Expense Tracker built in React using Vite, Bootstrap, Cont
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Technology          | Purpose                                  |
 |---------------------|-------------------------------------------|
@@ -24,27 +24,27 @@ A responsive, modular Expense Tracker built in React using Vite, Bootstrap, Cont
 
 ---
 
-## ✨ Features
+## Features
 
-### ✅ Transaction CRUD
+### Transaction CRUD
 - Add, edit, and delete entries with scrollable modal forms  
 - Data validation via controlled inputs  
 - LocalStorage-backed updates  
 
-### 🎯 Filtering
+### Filtering
 - Dropdown filter by category  
 - Toggle to view transactions from last 7 days  
 
-### 🌙 Theme Toggle
+### Theme Toggle
 - Light/Dark mode toggle stored in localStorage  
 - Floating theme pill button for mobile access  
 
-### 📱 Responsive UX
+### Responsive UX
 - Bootstrap grid for clean mobile rendering  
 - Modals optimized with `scrollable` prop  
 - Accessible buttons with `bi` icons + tooltips  
 
-### 📤 Export Tools
+### Export Tools
 - One-click CSV export via `react-csv`  
 - PDF export via DOM capture (`jspdf` + `html2canvas`)  
 - Export scoped to current filtered data  
