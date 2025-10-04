@@ -53,7 +53,7 @@ A responsive, modular Expense Tracker built in React using Vite, Bootstrap, Cont
 
 ---
 
-## 🖼️ Screenshots
+## Screenshots
 
 Here are a few highlights from the Expense Tracker in action:
 
@@ -68,7 +68,7 @@ Here are a few highlights from the Expense Tracker in action:
 
 ---
 
-## 📋 Prerequisites
+## Prerequisites
 
 To run this project locally, ensure you have:
 
@@ -78,7 +78,7 @@ To run this project locally, ensure you have:
 - CLI tools: `yarn`  
 - Optionally: PDF viewer for exported files 
 
-## 🚀 Quick Start
+## Quick Start
 
 ```
 git clone https://github.com/your-username/expense-tracker
@@ -92,7 +92,7 @@ Make sure to install:
 yarn add react-csv jspdf html2canvas bootstrap bootstrap-icons
 ```
 ---
-## 🧠 Educational Touch
+## Educational Touch
 This codebase includes:
 
 - Fully commented modular components
@@ -105,7 +105,7 @@ This codebase includes:
 
 ---
 
-## 🗃️ Folder Structure
+## Folder Structure
 
 ```
 src/
@@ -121,7 +121,7 @@ src/
 └── index.css
 ```
 ---
-## 🎯 Coming Soon
+## Coming Soon
 
 > Toast alerts for actions
 
