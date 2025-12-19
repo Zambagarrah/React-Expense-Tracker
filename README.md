@@ -134,7 +134,7 @@ src/
 
 ---
 
-## 👤 Creator
+## Creator
 
 Built by **Zablon**, a visionary React developer and educator focused on reproducibility, modular design, and clean UI/UX.  
 > For collaboration or inquiries: [Talk to me](https://github.com/Zambagarrah)
