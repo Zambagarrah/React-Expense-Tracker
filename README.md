@@ -23,7 +23,7 @@ A responsive, modular Expense Tracker built in React using Vite, Bootstrap, Cont
 | jspdf + html2canvas | PDF export from DOM elements              |
 
 ---
-..
+
 ## Features
 
 ### Transaction CRUD
